@@ -6,26 +6,15 @@ export default function TabsLayout(){
     <Tabs
    
     screenOptions={{
-      tabBarActiveTintColor:"orange",
+      tabBarActiveTintColor:"lightblue",
       tabBarInactiveTintColor:"black",
 
-      tabBarShowLabel: true,
-      tabBarStyle: {
-        height: 90,
-        width: "90%",
-        borderRadius: 30,
-        paddingTop: 10,
-        paddingBottom: 10,
-        marginBottom: 20,
-        alignSelf: "center",
-        borderWidth: 1,
-        borderColor: "orange"
-      },
-      tabBarLabelStyle: {
-        fontSize: 15,
-        marginTop: 3
+      tabBarStyle:{
+        backgroundColor:"white",
+        height: 70
       }
     }}
+    
     >
          <Tabs.Screen
          name="home"
