@@ -1,52 +1,47 @@
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-native'
-import Card from '../../components/card'
+import {
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
+import StudentCard from "../../components/studentCard";
 
 const home = () => {
   return (
     <ScrollView style={styles.container}>
-
       <View style={styles.header}>
-         <View style={styles.headerContent}>
-            <Text style={styles.headerText}>Hi there👋</Text>
-            <Text style={styles.headerText}>Welcome to our app</Text>
-            <TouchableOpacity style={styles.headerButton}>
-               <Text style={styles.headerButtonText}>View Products</Text>
-            </TouchableOpacity>
-         </View>
+        <View style={styles.headerContent}>
+          <Text style={styles.headerText}>Hi there👋</Text>
+          <Text style={styles.headerText}>Welcome to our app</Text>
+          <TouchableOpacity style={styles.headerButton}>
+            <Text style={styles.headerButtonText}>View Products</Text>
+          </TouchableOpacity>
+        </View>
       </View>
 
       <View style={styles.productsSection}>
-        <Text style={styles.headerText}>Featured Products</Text>
-      <ScrollView
-       contentContainerStyle={styles.cardContainer}
-       horizontal
-       >
-        <Card 
-        image={require("../../../assets/images/favicon.png")}
-        name="Icon"
-        price="$50"
-        available={true}
-        />
-        <Card 
-        image={require("../../../assets/images/icon.png")}
-        name="Gown"
-        price="$100"
-        available={false}
-        />
-        <Card 
-        image={require("../../../assets/images/android-icon-background.png")}
-        name="Dress"
-        price="$75"
-        available={true}
-        />
+        <Text style={styles.headerText}>Featured Students</Text>
 
-      </ScrollView>
+        <ScrollView>
+          
+          <StudentCard 
+          name="Amanda"
+          age={40}
+          level="Level 3"
+          />
+          <StudentCard 
+          name="Daniel"
+          age={50}
+          level="Level 400"
+          />
+        </ScrollView>
       </View>
     </ScrollView>
-  )
-}
+  );
+};
 
-export default home
+export default home;
 
 const styles = StyleSheet.create({
   container: {
@@ -86,5 +81,5 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     padding: 10,
-  }
-})
+  },
+});
